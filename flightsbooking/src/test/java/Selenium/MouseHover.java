@@ -37,12 +37,12 @@ public class MouseHover {
 		driver.get(url);
 		js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,800)");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		WebElement mouseHover=driver.findElement(By.id("mousehover"));
 		Actions mouseAction=new Actions(driver);
 		mouseAction.moveToElement(mouseHover).perform();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		WebElement subElement=driver.findElement(By.xpath("//div[@class='mouse-hover-content']//a[text()='Reload']"));
 		subElement.click();
